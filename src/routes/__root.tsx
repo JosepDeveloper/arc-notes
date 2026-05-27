@@ -53,6 +53,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
     return () => media.removeEventListener("change", updateTheme)
   }, [])
+
   return (
     <html lang="en">
       <head>
