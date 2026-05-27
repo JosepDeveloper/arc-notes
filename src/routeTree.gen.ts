@@ -9,51 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as Char123LocaleChar125IndexRouteImport } from './routes/{-$locale}/index'
+import { Route as IndexRouteImport } from './routes/index'
 
-const Char123LocaleChar125IndexRoute =
-  Char123LocaleChar125IndexRouteImport.update({
-    id: '/{-$locale}/',
-    path: '/{-$locale}/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/{-$locale}/': typeof Char123LocaleChar125IndexRoute
+  '/': typeof IndexRoute
 }
 export interface FileRoutesByTo {
-  '/{-$locale}': typeof Char123LocaleChar125IndexRoute
+  '/': typeof IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/{-$locale}/': typeof Char123LocaleChar125IndexRoute
+  '/': typeof IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/{-$locale}/'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/{-$locale}'
-  id: '__root__' | '/{-$locale}/'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  Char123LocaleChar125IndexRoute: typeof Char123LocaleChar125IndexRoute
+  IndexRoute: typeof IndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/{-$locale}/': {
-      id: '/{-$locale}/'
-      path: '/{-$locale}'
-      fullPath: '/{-$locale}/'
-      preLoaderRoute: typeof Char123LocaleChar125IndexRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  Char123LocaleChar125IndexRoute: Char123LocaleChar125IndexRoute,
+  IndexRoute: IndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
