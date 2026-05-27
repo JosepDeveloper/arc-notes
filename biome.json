@@ -1,30 +1,26 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
-
+	"$schema": "https://biomejs.dev/schemas/2.4.5/schema.json",
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
 		"useIgnoreFile": true
 	},
-
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["**/src/**/*", "**/app/**/*", "**/index.html"],
-		"ignores": ["**/dist/**", "**/node_modules/**"]
+		"includes": [
+			"**/*.{ts,tsx,js,jsx}",
+			"src",
+			"src/**/*"
+		]
 	},
-
 	"formatter": {
 		"enabled": true,
 		"formatWithErrors": true,
 		"indentStyle": "space",
 		"indentWidth": 2,
 		"lineEnding": "lf",
-		"lineWidth": 100,
-		"quoteStyle": "single",
-		"jsxQuoteStyle": "single",
-		"trailingCommas": "es5"
+		"lineWidth": 100
 	},
-
 	"javascript": {
 		"formatter": {
 			"semicolons": "asNeeded",
@@ -33,46 +29,46 @@
 			"bracketSameLine": false,
 			"quoteProperties": "asNeeded"
 		},
-		"globals": ["window", "document", "navigator"]
+		"globals": [
+			"window",
+			"document",
+			"navigator"
+		]
 	},
-
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
 	"json": {
 		"formatter": {
 			"trailingCommas": "none"
 		}
 	},
-
 	"assist": {
 		"actions": {
 			"source": {
-				"organizeImports": "on"
+				"organizeImports": "off"
 			}
 		}
 	},
-
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-
 			"nursery": {
 				"noFloatingPromises": "error",
-				"noMisusedPromises": "error",
-				"useExhaustiveDependencies": "warn"
+				"noMisusedPromises": "error"
 			},
-
 			"suspicious": {
 				"noDebugger": "error",
-				"noConsoleLog": "warn",
 				"noExplicitAny": "warn",
 				"noVar": "error"
 			},
-
 			"security": {
 				"noDangerouslySetInnerHtml": "error",
 				"noGlobalEval": "error"
 			},
-
 			"style": {
 				"useConst": "error",
 				"noImplicitBoolean": "off",
@@ -86,10 +82,11 @@
 			}
 		}
 	},
-
 	"overrides": [
 		{
-			"includes": ["**/*.svelte"],
+			"includes": [
+				"**/*.svelte"
+			],
 			"linter": {
 				"rules": {
 					"style": {
