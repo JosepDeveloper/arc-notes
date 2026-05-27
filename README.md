@@ -1,4 +1,4 @@
-# Minimal Notes
+# Arc Note
 
 A **local-first** note-taking application inspired by Apple Notes and Notion, built with **TanStack Start**, **React 19**, and **TypeScript**.
 
@@ -14,7 +14,7 @@ Designed to be:
 
 # ✨ Vision
 
-Minimal Notes aims to deliver a fast and fluid experience similar to apps like:
+Arc Note aims to deliver a fast and fluid experience similar to apps like:
 
 * Apple Notes
 * Notion
@@ -266,7 +266,7 @@ http://localhost:3000
 
 # 🎯 Philosophy
 
-Minimal Notes follows a `local-first` architecture.
+Arc Note follows a `local-first` architecture.
 
 This means:
 
