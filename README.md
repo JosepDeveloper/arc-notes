@@ -1,217 +1,276 @@
-Welcome to your new TanStack Start app! 
+# Minimal Notes
 
-# Getting Started
+A **local-first** note-taking application inspired by Apple Notes and Notion, built with **TanStack Start**, **React 19**, and **TypeScript**.
 
-To run this application:
+Designed to be:
+
+* ⚡ Instant
+* 📴 Offline-first
+* 📱 Installable as a PWA
+* 🧠 Productivity-optimized
+* 🎨 Minimalist and modern
+
+---
+
+# ✨ Vision
+
+Minimal Notes aims to deliver a fast and fluid experience similar to apps like:
+
+* Apple Notes
+* Notion
+* Craft
+* Obsidian
+
+All information is stored locally using IndexedDB to guarantee:
+
+* Instant startup
+* Offline usage
+* Reliable persistence
+* Native app-like experience
+
+---
+
+# 🚀 Features
+
+## Editor
+
+* ✏️ Block-based editor powered by Yoopta Editor
+* 🧱 Notion-like experience
+* ⌨️ Keyboard shortcuts
+* 💾 Automatic autosave
+* 📝 Rich text formatting support
+* 📋 Slash commands *(planned)*
+
+---
+
+## Local-first
+
+* 📦 Local persistence with IndexedDB
+* ⚡ Instant saving
+* 📴 Works offline
+* 🔄 Architecture ready for future sync support
+* 🆔 Sortable IDs with ULID
+
+---
+
+## User Experience
+
+* 🌙 Automatic dark mode
+* 📱 Responsive design
+* ⚡ Instant navigation
+* 🎨 Minimal UI with shadcn/ui
+* 🖥️ Desktop-like experience
+* ⌨️ Keyboard-first UX
+
+---
+
+## Performance
+
+* 🔍 Instant local search
+* ⚡ Optimized rendering
+* 🧠 Local note indexing
+* 📚 Virtualization for thousands of notes *(planned)*
+* 💤 Lazy loading *(planned)*
+
+---
+
+## PWA
+
+* 📲 Installable on mobile and desktop
+* 📴 True offline support with Service Workers
+* ⚡ Smart caching
+* 🖥️ Fullscreen native app-like experience
+
+---
+
+# 🛠️ Stack
+
+| Technology           | Purpose                      |
+| -------------------- | ---------------------------- |
+| **TanStack Start**   | Main framework               |
+| **React 19**         | Reactive UI                  |
+| **TypeScript**       | Static typing                |
+| **Tailwind CSS 4**   | Styling                      |
+| **shadcn/ui**        | Accessible components        |
+| **Yoopta Editor**    | Block-based rich text editor |
+| **Dexie**            | IndexedDB wrapper            |
+| **Zustand**          | Global state management      |
+| **MiniSearch**       | Local full-text search       |
+| **ULID**             | Time-sortable IDs            |
+| **Motion**           | Animations                   |
+| **Lucide**           | Icons                        |
+| **Workbox**          | PWA + Service Workers        |
+| **TanStack Virtual** | List virtualization          |
+
+---
+
+# 📂 Architecture
+
+```txt
+src/
+├── components/
+├── features/
+│   ├── notes/
+│   ├── editor/
+│   ├── sidebar/
+│   └── search/
+├── db/
+├── stores/
+├── hooks/
+├── routes/
+└── lib/
+```
+
+---
+
+# ⚡ Quick Start
+
+## Install dependencies
 
 ```bash
 pnpm install
+```
+
+## Development
+
+```bash
 pnpm dev
 ```
 
-# Building For Production
+Open:
 
-To build this application for production:
-
-```bash
-pnpm build
+```txt
+http://localhost:3000
 ```
 
-## Testing
+---
 
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+# 📜 Scripts
 
-```bash
-pnpm test
-```
+| Command        | Description          |
+| -------------- | -------------------- |
+| `pnpm dev`     | Development server   |
+| `pnpm build`   | Production build     |
+| `pnpm preview` | Production preview   |
+| `pnpm test`    | Run tests            |
+| `pnpm lint`    | Linting              |
+| `pnpm format`  | Formatting           |
+| `pnpm check`   | Lint + format        |
+| `pnpm deploy`  | Deploy to Cloudflare |
 
-## Styling
+---
 
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+# 🗺️ Roadmap
 
-### Removing Tailwind CSS
+## Phase 0 — Setup
 
-If you prefer not to use Tailwind CSS:
+* [x] Setup TanStack Start
+* [x] Configure Tailwind CSS
+* [x] Configure shadcn/ui
+* [ ] Create base layout
+* [ ] Dark mode
+* [ ] Folder structure
 
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `pnpm add @tailwindcss/vite tailwindcss --dev`
+---
 
-## Linting & Formatting
+## Phase 1 — Local Database
 
-This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
+* [ ] Configure Dexie
+* [ ] Define notes schema
+* [ ] Notes CRUD
+* [ ] ULID IDs
+* [ ] Local persistence
 
+---
 
-```bash
-pnpm lint
-pnpm format
-pnpm check
-```
+## Phase 2 — Notes UI
 
+* [ ] Notes sidebar
+* [ ] Create note
+* [ ] Delete note
+* [ ] Active note selection
+* [ ] Date sorting
 
-## Deploy to Cloudflare Workers
+---
 
-This project uses the Cloudflare Vite plugin (configured in `vite.config.ts`) and `wrangler.jsonc`:
+## Phase 3 — Editor
 
-1. Install Wrangler: `npm install -g wrangler`
-2. Authenticate: `wrangler login`
-3. Deploy: `npx wrangler deploy`
+* [ ] Integrate Yoopta Editor
+* [ ] Load content from IndexedDB
+* [ ] Autosave
+* [ ] Debounced writing
+* [ ] Empty state
 
-For production env vars, run `wrangler secret put MY_VAR` for each secret listed in `.env.example`. Public (non-secret) vars go in `wrangler.jsonc` under `vars`.
+---
 
-KV, D1, R2, and Durable Object bindings are configured in `wrangler.jsonc` — see https://developers.cloudflare.com/workers/wrangler/configuration/.
+## Phase 4 — UX
 
+* [ ] Keyboard shortcuts
+* [ ] Cmd/Ctrl + K
+* [ ] Cmd/Ctrl + N
+* [ ] Smooth transitions
+* [ ] Skeleton loaders
+* [ ] Accessibility improvements
 
+---
 
-## Routing
+## Phase 5 — Search
 
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
+* [ ] Integrate MiniSearch
+* [ ] Notes indexing
+* [ ] Instant search
+* [ ] Search result highlighting
 
-### Adding A Route
+---
 
-To add a new route to your application just add a new file in the `./src/routes` directory.
+## Phase 6 — PWA
 
-TanStack will automatically generate the content of the route file for you.
+* [ ] Manifest
+* [ ] Service Worker
+* [ ] Offline caching
+* [ ] Mobile installation
+* [ ] Offline fallback
 
-Now that you have two routes you can use a `Link` component to navigate between them.
+---
 
-### Adding Links
+## Phase 7 — Performance
 
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
+* [ ] Sidebar virtualization
+* [ ] Lazy loading editor
+* [ ] Optimize renders
+* [ ] Optimize searches
+* [ ] Optimize IndexedDB writes
 
-```tsx
-import { Link } from "@tanstack/react-router";
-```
+---
 
-Then anywhere in your JSX you can use it like so:
+## Phase 8 — Advanced Features
 
-```tsx
-<Link to="/about">About</Link>
-```
+* [ ] Pinned notes
+* [ ] Trash
+* [ ] Archive
+* [ ] Drag & drop
+* [ ] Note history
+* [ ] Export/import
 
-This will create a link that will navigate to the `/about` route.
+---
 
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
+## Phase 9 — Sync (future)
 
-### Using A Layout
+* [ ] Auth
+* [ ] Multi-device sync
+* [ ] Cloud backup
+* [ ] Conflict resolution
+* [ ] Realtime collaboration *(exploration)*
 
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
+---
 
-Here is an example layout that includes a header:
+# 🎯 Philosophy
 
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+Minimal Notes follows a `local-first` architecture.
 
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-})
-```
+This means:
 
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start'
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString()
-})
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('')
-  
-  useEffect(() => {
-    getServerTime().then(setTime)
-  }, [])
-  
-  return <div>Server time: {time}</div>
-}
-```
-
-## API Routes
-
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-import { json } from '@tanstack/react-start'
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-})
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people')
-    return response.json()
-  },
-  component: PeopleComponent,
-})
-
-function PeopleComponent() {
-  const data = Route.useLoaderData()
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  )
-}
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
-
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+* The app works locally first
+* Internet is optional
+* Sync will be a future enhancement
+* UX should never depend on the server
