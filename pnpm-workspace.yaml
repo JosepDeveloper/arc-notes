@@ -5,6 +5,4 @@ allowBuilds:
   sharp: true
   workerd: true
 
-trustPolicy: no-downgrade
-
 minimumReleaseAge: 1440
