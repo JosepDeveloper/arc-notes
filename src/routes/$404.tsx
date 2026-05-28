@@ -23,9 +23,9 @@ function RouteComponent() {
             </div>
 
             <div>
-              <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Minimal Notes</p>
+              <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Arc Notes</p>
 
-              <h1 className="text-2xl font-semibold tracking-tight">Note not found</h1>
+              <h1 className="text-2xl font-semibold tracking-tight">not found</h1>
             </div>
           </div>
         </CardHeader>
@@ -37,8 +37,7 @@ function RouteComponent() {
             </p>
 
             <p className="mt-4 max-w-md text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
-              The page or note you are trying to access doesn&apos;t exist, was deleted, or
-              hasn&apos;t synced locally yet.
+              The page or note you are trying to access doesn&apos;t exist.
             </p>
           </div>
         </CardContent>
