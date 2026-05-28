@@ -14,10 +14,10 @@
   "rtl": false,
   "aliases": {
     "components": "@/modules/core/components/design-system",
-    "utils": "@/lib/utils",
     "ui": "@/modules/core/components/design-system",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
+    "utils": "@/modules/core/lib/utils",
+    "hooks": "@/modules/core/hooks",
+    "lib": "@/modules/core/lib"
   },
   "menuColor": "default",
   "menuAccent": "subtle",
