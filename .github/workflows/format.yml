@@ -21,4 +21,4 @@ jobs:
         with:
           node-version: 24
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm biome fix
+      - run: pnpm run fix
