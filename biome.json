@@ -7,11 +7,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": [
-      "**/*.{ts,tsx,js,jsx}",
-      "src",
-      "src/**/*"
-    ]
+    "includes": ["**/*.{ts,tsx,js,jsx}", "src", "src/**/*"]
   },
   "formatter": {
     "enabled": true,
@@ -29,11 +25,7 @@
       "bracketSameLine": false,
       "quoteProperties": "asNeeded"
     },
-    "globals": [
-      "window",
-      "document",
-      "navigator"
-    ]
+    "globals": ["window", "document", "navigator"]
   },
   "css": {
     "parser": {
@@ -84,9 +76,7 @@
   },
   "overrides": [
     {
-      "includes": [
-        "**/*.svelte"
-      ],
+      "includes": ["**/*.svelte"],
       "linter": {
         "rules": {
           "style": {
@@ -96,9 +86,7 @@
       }
     },
     {
-      "includes": [
-        "src/routeTree.gen.ts"
-      ],
+      "includes": ["src/routeTree.gen.ts"],
       "linter": {
         "enabled": false
       },
