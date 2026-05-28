@@ -7,9 +7,12 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**/*.{ts,tsx,js,jsx}", "src", "src/**/*"]
+    "includes": [
+      "**/*.{ts,tsx,js,jsx}",
+      "src",
+      "src/**/*"
+    ]
   },
-  "ignore": ["src/routeTree.gen.ts"],
   "formatter": {
     "enabled": true,
     "formatWithErrors": true,
@@ -26,7 +29,11 @@
       "bracketSameLine": false,
       "quoteProperties": "asNeeded"
     },
-    "globals": ["window", "document", "navigator"]
+    "globals": [
+      "window",
+      "document",
+      "navigator"
+    ]
   },
   "css": {
     "parser": {
@@ -77,13 +84,26 @@
   },
   "overrides": [
     {
-      "includes": ["**/*.svelte"],
+      "includes": [
+        "**/*.svelte"
+      ],
       "linter": {
         "rules": {
           "style": {
             "useConst": "off"
           }
         }
+      }
+    },
+    {
+      "includes": [
+        "src/routeTree.gen.ts"
+      ],
+      "linter": {
+        "enabled": false
+      },
+      "formatter": {
+        "enabled": false
       }
     }
   ]
