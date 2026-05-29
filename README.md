@@ -167,9 +167,9 @@ http://localhost:3000
 * [x] Setup TanStack Start
 * [x] Configure Tailwind CSS
 * [x] Configure shadcn/ui
+* [x] Dark mode
+* [x] Folder structure
 * [ ] Create base layout
-* [ ] Dark mode
-* [ ] Folder structure
 
 ---
 
