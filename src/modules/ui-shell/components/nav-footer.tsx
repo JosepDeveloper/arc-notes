@@ -23,7 +23,7 @@ export function NavFooter({
       <SidebarMenu>
         {items.map((item) => (
           <SidebarMenuItem key={item.title}>
-            <SidebarMenuButton onClick={item.action} className="cursor-pointer">
+            <SidebarMenuButton onClick={item.action} className="cursor-pointer" asChild>
               <div>
                 <item.icon />
                 <span>{item.title}</span>
