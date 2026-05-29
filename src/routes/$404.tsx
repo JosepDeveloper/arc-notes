@@ -15,7 +15,7 @@ export const Route = createFileRoute("/$404")({
 function RouteComponent() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#f5f5f7] px-6 text-[#1d1d1f] dark:bg-[#111113] dark:text-[#f5f5f7]">
-      <Card className="w-full max-w-xl rounded-[32px] border border-black/5 bg-white/80 shadow-2xl shadow-black/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.03] dark:shadow-black/30">
+      <Card className="w-full max-w-xl rounded-[32px] border border-black/5 bg-white/80 shadow-2xl shadow-black/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/3 dark:shadow-black/30">
         <CardHeader className="space-y-6 p-8 pb-0">
           <div className="flex items-center gap-4">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-300 shadow-inner shadow-yellow-500/20 dark:bg-yellow-400">
