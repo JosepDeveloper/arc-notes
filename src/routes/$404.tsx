@@ -1,12 +1,12 @@
-import { Button } from "@/modules/core/components/design-system/button"
+import { Button } from "@/modules/core/components/design-system/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/modules/core/components/design-system/card"
-import { createFileRoute } from "@tanstack/react-router"
-import { FileQuestion, House, Undo2 } from "lucide-react"
+} from "@/modules/core/components/design-system/card";
+import { createFileRoute } from "@tanstack/react-router";
+import { FileQuestion, House, Undo2 } from "lucide-react";
 
 export const Route = createFileRoute("/$404")({
   component: RouteComponent,
