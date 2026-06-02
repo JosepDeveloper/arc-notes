@@ -15,15 +15,15 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset>
-        <div className="flex h-dvh flex-col overflow-hidden">
+      <AppSidebar variant="inset" />
+      <SidebarInset className="rounded-xl overflow-hidden">
+        <div className="flex h-full flex-col overflow-hidden">
           <header className="flex h-14 shrink-0 items-center gap-2 border-b bg-background px-4">
             <SidebarTrigger className="-ml-1" />
             <Separator orientation="vertical" className="mr-2" />
           </header>
 
-          <div className="flex-1 p-4 overflow-hidden">
+          <div className="flex-1 overflow-hidden p-4">
             <Skeleton className="h-full w-full rounded-lg" />
           </div>
         </div>
