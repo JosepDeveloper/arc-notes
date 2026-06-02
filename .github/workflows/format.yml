@@ -3,11 +3,21 @@ name: Format
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
 permissions:
   contents: write
 
 jobs:
   format:
+    if: github.actor != 'dependabot[bot]'
+
     runs-on: ubuntu-22.04
 
     steps:
