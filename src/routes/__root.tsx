@@ -1,3 +1,4 @@
+import { NotFound } from "@/modules/core/components/404"
 import { TooltipProvider } from "@/modules/core/components/design-system/tooltip"
 import { TanStackDevtools } from "@tanstack/react-devtools"
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router"
@@ -38,6 +39,7 @@ export const Route = createRootRoute({
     ],
   }),
   shellComponent: RootDocument,
+  notFoundComponent: () => <NotFound />,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
