@@ -1,4 +1,5 @@
 import { Separator } from "@/modules/core/components/design-system/separator"
+import { NotesList } from "./notes-list"
 
 type Props = {
   className?: string
@@ -14,6 +15,8 @@ export function NotesSidebar({ className }: Props) {
 
         <Separator className="mt-auto" />
       </header>
+
+      <NotesList />
     </section>
   )
 }
