@@ -5,22 +5,22 @@ const notesMock = [
   {
     title: "Project Architecture",
     description: "Define feature-based modules, shared UI components, and data access boundaries.",
-    createdAt: Temporal.Now.instant(),
+    createdAt: new Date(),
   },
   {
     title: "Meeting Notes",
     description: "Reviewed authentication flow, note syncing, and offline-first requirements.",
-    createdAt: Temporal.Now.instant().subtract({ days: 1 }),
+    createdAt: new Date(Date.now() - 24 * 60 * 60 * 1000),
   },
   {
     title: "CS2 Practice Routine",
     description: "15 min aim training, 20 min DM, 5 Premier matches, review demos afterward.",
-    createdAt: Temporal.Now.instant().subtract({ days: 3 }),
+    createdAt: new Date(Date.now() - 24 * 3 * 60 * 60 * 1000),
   },
   {
     title: "Shopping List",
     description: "Coffee beans, monitor arm, USB-C cable, keyboard switches, desk mat.",
-    createdAt: Temporal.Now.instant().subtract({ days: 5 }),
+    createdAt: new Date(Date.now() - 24 * 5 * 60 * 60 * 1000),
   },
 ]
 
