@@ -4,7 +4,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/modules/core/components/design-system/sidebar"
-import { Skeleton } from "@/modules/core/components/design-system/skeleton"
+import { NotesWorkspaces } from "@/modules/notes/components/notes-workspaces"
 import { AppSidebar } from "@/modules/ui-shell/components/app-sidebar"
 import { createFileRoute } from "@tanstack/react-router"
 
@@ -23,12 +23,11 @@ function Home() {
             <Separator orientation="vertical" className="mr-2" />
           </header>
 
-          <div className="flex-1 overflow-hidden p-4">
-            <Skeleton className="h-full w-full rounded-lg" />
+          <div className="flex-1 overflow-hidden">
+            <NotesWorkspaces />
           </div>
         </div>
       </SidebarInset>
-      j
     </SidebarProvider>
   )
 }
